@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 12-point check - The Reliable Agent</title>
+<meta name="description" content="The exact 12-point checklist Prince Maurya runs before any AI agent touches production, with the failure each point has already caught.">
+<style>
+  :root { --ink:#1b1b1b; --mute:#8f8a83; --accent:#FF6719; --wash:#FFF4EC; --line:#e9e3db; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#faf8f4; color:var(--ink); font:17px/1.6 Georgia, "Times New Roman", serif; }
+  .band { background:#151515; padding:56px 24px 44px; border-bottom:4px solid var(--accent); }
+  .band .in { max-width:760px; margin:0 auto; }
+  .brand { font-family:Arial, Helvetica, sans-serif; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); font-weight:700; }
+  h1 { color:#fff; font-size:44px; line-height:1.1; margin:18px 0 14px; letter-spacing:-.02em; }
+  .dek { color:#cfc8bf; font-size:19px; margin:0 0 22px; }
+  .meta { font-family:Arial, Helvetica, sans-serif; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--mute); }
+  .meta b { color:#fff; font-weight:600; }
+  .wrap { max-width:760px; margin:0 auto; padding:40px 24px 72px; }
+  .cta { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-family:Arial, Helvetica, sans-serif; font-weight:700; font-size:16px; padding:15px 28px; }
+  .cta:hover { background:#e85c14; }
+  .note { font-family:Arial, Helvetica, sans-serif; font-size:13px; color:var(--mute); margin:12px 0 0; }
+  .box { background:var(--wash); border-left:3px solid var(--accent); padding:16px 18px; margin:34px 0 0; font-size:15px; }
+  .box strong { font-family:Arial, Helvetica, sans-serif; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
+  ol.checks { list-style:none; padding:0; margin:34px 0 0; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:repeat(6, auto); grid-auto-flow:column; gap:0 32px; }
+  ol.checks li { display:grid; grid-template-columns:28px 1fr; gap:10px; padding:14px 0; border-bottom:1px solid var(--line); font-size:15px; line-height:1.45; }
+  ol.checks .n { font-family:Arial, Helvetica, sans-serif; font-weight:800; color:var(--accent); font-size:16px; }
+  footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--line); font-family:Arial, Helvetica, sans-serif; font-size:13px; color:var(--mute); }
+  footer a { color:var(--accent); text-decoration:none; }
+  @media (max-width:640px) {
+    h1 { font-size:32px; }
+    .band { padding:40px 20px 32px; }
+    .wrap { padding:32px 20px 56px; }
+    ol.checks { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="band">
+  <div class="in">
+    <div class="brand">The Reliable Agent &middot; Free checklist</div>
+    <h1>The 12-point check I run before any agent touches production</h1>
+    <p class="dek">The exact checklist, in order, with the failure each point has already caught.</p>
+    <div class="meta"><b>Prince Maurya</b> &middot; thereliableagent.substack.com &middot; v1, November 2026</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <a class="cta" href="The-Reliable-Agent-12-point-check.pdf" download>Download the PDF</a>
+  <p class="note">2 pages, A4, print-ready. Free to copy, run and share. Do not resell.</p>
+
+  <div class="box">
+    <strong>One rule.</strong> Every point logs pass or fail with the artifact that proves it - not a status message. If a point cannot run, it fails. There is no skip.
+  </div>
+
+  <ol class="checks">
+    <li><span class="n">1</span><span>Guardrail is registered on the execution path</span></li>
+    <li><span class="n">2</span><span>Guardrail sees normalized input</span></li>
+    <li><span class="n">3</span><span>Tool manifest hash matches the pinned hash</span></li>
+    <li><span class="n">4</span><span>Tool schema diff is reviewed before load</span></li>
+    <li><span class="n">5</span><span>Output set is asserted, not just the exit code</span></li>
+    <li><span class="n">6</span><span>Exit code is not the health signal</span></li>
+    <li><span class="n">7</span><span>Eval reports worst case, not the average</span></li>
+    <li><span class="n">8</span><span>Eval runs against a production-like environment</span></li>
+    <li><span class="n">9</span><span>Timeout and retry behavior tested on a failing tool</span></li>
+    <li><span class="n">10</span><span>Permissions diffed against the last deploy</span></li>
+    <li><span class="n">11</span><span>Kill switch tested end to end</span></li>
+    <li><span class="n">12</span><span>Canary with one known-bad case runs after deploy</span></li>
+  </ol>
+
+  <footer>
+    Prince Maurya &middot; <a href="https://thereliableagent.substack.com/p/the-12-point-check-i-run-before-any">read the full post</a>
+  </footer>
+</div>
+</body>
+</html>
